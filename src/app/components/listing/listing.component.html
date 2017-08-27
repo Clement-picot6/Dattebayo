@@ -1,0 +1,23 @@
+<div *ngIf="listing">
+	<a [routerLink]="['/listings']">Go back</a>
+	<br> 
+	<h2 class="page-header">
+		{{listing.title}} <small>{{listing.date}}, {{listing.seasons}} </small>
+	</h2>
+	<div class="row">
+		<div class="col-md-4">
+
+		</div>
+		<div class="col-md-8">
+			<ul class="list-group">
+				<li class="list-group-item"> Producteur: {{listing.producer}} </li>
+				<li class="list-group-item"> Genre: {{listing.genre}} </li>
+				<li class="list-group-item"> Type: {{listing.type}} </li>
+				<li class="list-group-item"> Synopsis: {{listing.synopsis}} </li>
+				<li class="list-group-item"> Trailer: {{listing.trailer}} </li>
+			</ul>
+		</div>
+		<a class="btn btn-default" href="#">Edit</a>
+		<a class="btn btn-danger" href="#">Delete</a>
+	</div>
+</div>
