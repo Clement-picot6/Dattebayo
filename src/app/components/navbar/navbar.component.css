@@ -1,0 +1,24 @@
+.navbar-inverse {
+	background-image: url(../../../assets/img-layout/pattern.png);
+	border-color: #DE3E25;
+}
+
+.navbar-collapse ul[_ngcontent-c1] li[_ngcontent-c1] a  {
+	color: #ffffff;
+}
+
+.navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
+	color: #ffffff;
+	background-color: #DE3E25;
+}
+
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+	color: #ffffff;
+	background-color: #DE3E25;
+}
+
+
+.alert-success {
+	timeout:3000;
+}

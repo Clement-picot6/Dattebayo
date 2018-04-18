@@ -1,7 +1,8 @@
-<div class="jumbotron text-center">
+<div class=" text-center jumbotron">
 	<div class="container">
-		<h1>Property Listings</h1>
-		<p>Access the hottest properties available</p>
-		<a [routerLink]="['/']" (click)="login()"><img src="assets/img-layout/google.png" alt=""></a>
+		<h1>Bienvenue sur <strong>Dattebayo</strong></h1>
+		<p>Base de données d'animés Japonais</p>
+		<a [routerLink]="['/']" (click)="login()" *ngIf=" !(afAuth.authState | async)"><img src="assets/img-layout/google.png" alt=""></a>
+		<a [routerLink]="['/']" *ngIf=" (afAuth.authState | async)"><img src="assets/img-layout/japon.jpg" alt="japon" class="thumbnail"></a>
 	</div>	
 </div>

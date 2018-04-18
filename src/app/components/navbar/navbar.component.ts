@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(public afAuth: AngularFireAuth, public flashMessage: FlashMessagesService) { 
   	this.user = afAuth.authState;
+
   }
 
   ngOnInit() {
@@ -22,12 +23,19 @@ export class NavbarComponent implements OnInit {
 
   login() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    if (this.afAuth.authState) {
+      this.flashMessage.show('Content de te (re)voir! On espère que tu trouveras ton bonheur 😊', 
+    {cssClass: 'alert-success', timeout: 3000});
+    }
+    
   }
 
   logout() {
     this.afAuth.auth.signOut();
     this.flashMessage.show('Vous avez bien été déconnecté. À bientôt :-)', 
-    {cssClass: 'alert-success', timeout: 3000});
+    {cssClass: 'alert-danger', timeout: 3000});
   }
 
 }
+
+

@@ -1,0 +1,68 @@
+.form-check {
+	display: block;
+	float: left;
+	width: 70%;
+	margin-bottom: 5%;
+}
+
+.from-check label{
+	float: left;
+}
+
+.form-check .wrap-container {
+	display: block;
+}
+
+
+.profile_aside {
+	width: 100%;
+	float: left;
+}
+
+img[alt="profil"] {
+	border-radius: 250px;
+	width:5%;
+	float: right;
+}
+
+.thumbnail {
+	margin: 0;
+}
+
+.about_profile {
+	width: 100%;
+}
+
+.about_profile .form-group {
+	width: 100%;
+}
+
+.about_profile .form-control {
+	width: 100%;
+}
+
+.about_profile .btn-success {
+	margin-bottom: 4%;
+}
+
+
+@media screen and (max-width:1560px) {
+	img[alt="profil"] {
+	border-radius: 250px;
+	width:5%;
+}
+}
+
+@media screen and (max-width:991px) {
+	img[alt="profil"] {
+	border-radius: 250px;
+	width:10%;
+}
+}
+
+@media screen and (max-width: 750px) {
+	img[alt="profil"] {
+	border-radius: 250px;
+	width:15%;
+}
+}

@@ -1,0 +1,90 @@
+<a [routerLink]="['/listings']">Go back</a>
+<br>
+<h2 class="page-header profile_aside">Profil <img src="../../assets/img-layout/profile.jpg" class="thumbnail" alt="profil"></h2>
+<form #f="ngForm" (ngSubmit)="clicked(f)" class="about_profile" novalidate>
+	<div class="form-group">
+		<label>Nom d'utilisateur</label>
+		<input type="text" class="form-control" [(ngModel)]="user" name="user" id="inputUser">
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" [(ngModel)]="email" name="email" id="inputEmail">
+	</div>
+	<div class="form-group">
+		<label>Prénom</label>
+		<input type="text" class="form-control" [(ngModel)]="prenom" name="prenom" id="inputPrenom">
+	</div>
+	<div class="form-group">
+		<label>Nom de famille</label>
+		<input type="text" class="form-control" [(ngModel)]="nom" name="nom" id="inputNom">
+	</div>
+	<div class="form-group">
+		<label>Ta bio</label>
+		<input type="text" class="form-control"  [(ngModel)]="bio" name="bio" id="inputBio">
+	</div>
+		<input class="btn btn-success genial" id="fun" type="submit" value="Rock it Baby" />
+	</form>
+<div class="col-md-12">
+
+	<br>
+
+	<form>
+		<div class="form-group">
+			<label for="exampleFormControlSelect1">Quel type d'animé préfères-tu ?</label>
+			<select class="form-control" id="exampleFormControlSelect1">
+				<option>Shōnen - Longues séries (Dragon Ball, One Piece, Naruto...)</option>
+				<option>Shojo - Destinés aux jeunes filles (L'académie Alice, Nana, La Rose de Versailles...)</option>
+				<option>Kodomo - Destinés aux enfants (Pokémon, Hamtaro, AstroBoy...)</option>
+				<option>Seinen - Public mature, traite de tous les thèmes (Samurai Champloo, Berserk...)</option>
+				<option>Josei - Public mature uniquement féminin (Pékin Années Folles, Danse vers les étoiles...)</option>
+			</select>
+		</div>
+
+		<br>
+		<br>
+
+		<div class="form-check">
+			<label class="form-check-label">Quel type d'univers préfères-tu ?</label>
+			<div class="wrap-container">
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Magie
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Sciences Fiction
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Fantastique
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Drame
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Sport
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Amour
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Horreur
+				</p>
+				<p>
+					<input type="checkbox" class="form-check-input">
+					Aventure
+				</p>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script>
+	$('.genial').click(function(){
+	console.log("TEST")
+})
+</script>

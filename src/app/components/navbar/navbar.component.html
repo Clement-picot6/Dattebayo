@@ -18,9 +18,9 @@
    <ul class="nav navbar-nav navbar-right">
      <li *ngIf=" !(afAuth.authState | async)"><a [routerLink]="['/']" (click)="login()">Login</a></li>
      <li *ngIf=" (afAuth.authState | async)"><a [routerLink]="['/']" (click)="logout()">Logout</a></li>
+      <li *ngIf=" (afAuth.authState | async)"><a [routerLink]="['/profile']">Profil</a></li>
    </ul>
  </div>
 </div>
 </nav>
-
 

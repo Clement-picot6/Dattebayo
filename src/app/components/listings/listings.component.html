@@ -1,5 +1,15 @@
+<form id="filter">
+	<label>Rechercher / Filtrer</label>
+	<input type="text" class="form-control" name="term" [(ngModel)]="term" placeholder="Rechercher en fonction du titre de l'oeuvre"/>
+	<input type="text" class="form-control" name="pouet" [(ngModel)]="pouet" placeholder="Rechercher en fonction du genre: Action, Romance, Magie..."/>
+	<input type="text" class="form-control" name="jbzz" [(ngModel)]="jbzz" placeholder="Rechercher en fonction du type: Shonen, Shojo, Kodomo..."/>
+</form>
+
+<br><br>
+
 <ul class="list-group">
-	<li class="list-group-item" *ngFor=" let listing of listings">
+	<li class="list-group-item" *ngFor=" let listing of listings | filter:term | iloveit:jbzz | gender:pouet">
 		<a [routerLink]="['/listings/'+listing.$key]">{{listing.title}}</a>
+		<img src="{{imageUrl}}" alt="">
 	</li>
 </ul>
