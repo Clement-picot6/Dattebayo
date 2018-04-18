@@ -22,3 +22,29 @@
 .alert-success {
 	timeout:3000;
 }
+
+.navbar-brand {
+	color: white;
+}
+
+#navbar {
+	display: flex;
+}
+
+.navbar-left, .navbar-right {
+	display: flex;
+	flex-direction: row;
+}
+
+#navbar li {
+	padding-right: 30px;
+}
+
+#navbar li a{
+	color: white;
+}
+
+#navbar li a:hover {
+	text-decoration: none;
+	background-color: #E1533C;
+}
